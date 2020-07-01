@@ -54,7 +54,7 @@ function AuthProvider({children}) {
         const storedToken = Cookies.get(APP_COOKIES_PREFIX + 'token')
         const storedUser = Cookies.get(APP_COOKIES_PREFIX + 'user')
         if(storedToken && storedUser) {
-            awaitsetUser(storedUser)
+            setUser(storedUser)
             setToken(storedToken)
             setAxiosToken()
         }
